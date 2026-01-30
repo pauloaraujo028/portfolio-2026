@@ -6,6 +6,7 @@ import * as THREE from "three";
 
 function Particles() {
   const particlesRef = useRef<THREE.InstancedMesh>(null);
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [hovered, setHovered] = useState(false);
 
   const mousePosition = useRef({ x: 0, y: 0 });
