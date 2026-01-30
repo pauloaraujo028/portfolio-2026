@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 import { Space_Grotesk } from "next/font/google";
 import "./globals.css";
 
-export const grotesk = Space_Grotesk({
+const grotesk = Space_Grotesk({
   subsets: ["latin"],
   variable: "--font-grotesk",
   weight: ["400", "500", "600", "700"],
