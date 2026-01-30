@@ -1,6 +1,7 @@
 # 📦 Projeto Gerado com o Project Builder
 
 Bem-vindo(a)! Este projeto foi gerado automaticamente com base nas configurações que você selecionou.
+https://builderdev.vercel.app/
 
 ## 👨‍💻 Sobre o Projeto
 
