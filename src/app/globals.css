@@ -172,6 +172,9 @@
   body {
     @apply bg-background text-foreground;
   }
+  html {
+    scroll-behavior: smooth;
+  }
 
   @keyframes float {
     0%,

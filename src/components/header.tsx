@@ -27,10 +27,13 @@ const Header = () => {
   const scrollToSection = (href: string) => {
     if (href === "#") {
       window.scrollTo({ top: 0, behavior: "smooth" });
-    } else {
-      const element = document.querySelector(href);
-      element?.scrollIntoView({ behavior: "smooth" });
+      setIsMobileMenuOpen(false);
+      return;
     }
+
+    const element = document.querySelector(href);
+    element?.scrollIntoView({ behavior: "smooth", block: "start" });
+
     setIsMobileMenuOpen(false);
   };
 
@@ -44,35 +47,26 @@ const Header = () => {
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between">
-          <a
-            href="#"
-            onClick={(e) => {
-              e.preventDefault();
-              scrollToSection("#");
-            }}
+          <button
+            onClick={() => scrollToSection("#")}
             className="from-primary to-secondary bg-gradient-to-r bg-clip-text text-2xl font-bold text-transparent transition-transform duration-300 hover:scale-105"
           >
             &lt;PA /&gt;
-          </a>
+          </button>
 
           {/* Desktop Navigation */}
           <div className="hidden items-center gap-8 md:flex">
             {navLinks.map((link) => (
-              <a
+              <button
                 key={link.label}
-                href={link.href}
-                onClick={(e) => {
-                  e.preventDefault();
-                  scrollToSection(link.href);
-                }}
+                onClick={() => scrollToSection(link.href)}
                 className="text-foreground/80 hover:text-foreground after:from-primary after:to-secondary relative transition-colors duration-300 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-left after:scale-x-0 after:bg-gradient-to-r after:transition-transform after:duration-300 hover:after:scale-x-100"
               >
                 {link.label}
-              </a>
+              </button>
             ))}
           </div>
 
-          {/* Mobile Menu Button */}
           <Button
             variant="ghost"
             size="icon"
@@ -83,21 +77,16 @@ const Header = () => {
           </Button>
         </div>
 
-        {/* Mobile Navigation */}
         {isMobileMenuOpen && (
           <div className="glass-effect border-primary/20 mt-4 rounded-xl border py-4 shadow-lg md:hidden">
             {navLinks.map((link) => (
-              <a
+              <button
                 key={link.label}
-                href={link.href}
-                onClick={(e) => {
-                  e.preventDefault();
-                  scrollToSection(link.href);
-                }}
+                onClick={() => scrollToSection(link.href)}
                 className="text-foreground/80 hover:text-foreground hover:bg-primary/10 mx-2 block rounded-lg px-6 py-3 transition-all duration-300"
               >
                 {link.label}
-              </a>
+              </button>
             ))}
           </div>
         )}

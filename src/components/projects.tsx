@@ -32,6 +32,25 @@ const Projects = () => {
       highlight: true,
     },
     {
+      title: "GS Calendar",
+      description:
+        "O GS Calendar é um sistema de reserva de salas de reunião desenvolvido para resolver um problema real: a desorganização de horários em ambientes corporativos.",
+      image: "/assets/projetos/gs-calendar.png",
+      tags: [
+        "Next.js",
+        "TypeScript",
+        "Tailwind CSS",
+        "Prisma",
+        "PostgreSQL",
+        "Shadcn UI",
+        "Better Auth",
+      ],
+      github:
+        "https://github.com/pauloaraujo028/gs-calendar/blob/main/README.md",
+      demo: "https://gs-calendar.vercel.app/",
+      highlight: true,
+    },
+    {
       title: "MyAgendify - Sistema de Agendamento",
       description:
         "Sistema de agendamento online para barbearias, facilitando o gerenciamento de horários e clientes.",
