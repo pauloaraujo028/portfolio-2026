@@ -10,7 +10,7 @@ Este projeto foi criado com foco em produtividade e boas práticas, incluindo fe
 ### Detalhes do Projeto
 
 - **Nome**: portfolio-nextjs
-- **Descrição**: Portfolio 2025
+- **Descrição**: Portfolio 2026
 - **Versão**: 0.1.0
 - **Template**: default
 - **Dependências**: shadcn, darkmode, prettier
